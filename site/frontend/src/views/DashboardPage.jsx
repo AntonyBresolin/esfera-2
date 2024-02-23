@@ -1,11 +1,12 @@
 import React from "react";
+import Topbar from "../components/navbar/Topbar";
 
-const LoginPage = () => {
+const DashboardPage = () => {
   return (
-    <div>
-      <h1 className="text-xl text-green-600">Login Page</h1>
+    <div className="bg-defaultBg h-screen">
+      <Topbar />
     </div>
   );
 }
 
-export default LoginPage;
+export default DashboardPage;
