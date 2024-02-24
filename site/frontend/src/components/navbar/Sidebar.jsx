@@ -22,7 +22,7 @@ const Sidebar = ({ open }) => {
       <nav className='flex flex-col pt-[61px] justify-between h-full'>
         <div className='flex flex-col items-center px-2 py-2'>
           <div className={classNames(
-            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow duration-300 ease-in-out', {
+            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 0,
           })} onClick={() => handleSelected(0)}>
             <DashboardIcon fontSize='' className={classNames(
@@ -34,7 +34,7 @@ const Sidebar = ({ open }) => {
             })}>Dashboard</span>
           </div>
           <div className={classNames(
-            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow duration-300 ease-in-out', {
+            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 1,
           })} onClick={() => handleSelected(1)}>
             <CalendarMonthIcon fontSize='' className={classNames(
@@ -46,7 +46,7 @@ const Sidebar = ({ open }) => {
             })}> Calendário</span>
           </div>
           <div className={classNames(
-            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow duration-300 ease-in-out', {
+            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 2,
           })} onClick={() => handleSelected(2)}>
             <PersonAddIcon fontSize='' className={classNames(
@@ -58,7 +58,7 @@ const Sidebar = ({ open }) => {
             })}>Clientes</span>
           </div>
           <div className={classNames(
-            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow duration-300 ease-in-out', {
+            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 3,
           })}
             onClick={() => handleSelected(3)}>
@@ -71,7 +71,7 @@ const Sidebar = ({ open }) => {
             })}>Propostas</span>
           </div>
           <div className={classNames(
-            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow duration-300 ease-in-out', {
+            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 4,
           })}
             onClick={() => handleSelected(4)}>
@@ -84,14 +84,13 @@ const Sidebar = ({ open }) => {
             })}>Ligações</span>
           </div>
         </div>
-        <div >
+        <div>
           <hr></hr>
-          <div className='text-[#98A2B3] text-center py-4'>
+          <div className='text-[#98A2B3] text-center py-4 hover:text-gray-600 ease-in-out duration-150 cursor-pointer'>
             <HelpIcon fontSize='' className='text-xl mr-2' />
             <span className={classNames('', { 'hidden': open })}>Ajuda</span>
           </div>
         </div>
-
       </nav>
     </div>
   );
