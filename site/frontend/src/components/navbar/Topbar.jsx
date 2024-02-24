@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import MenuIcon from '@mui/icons-material/Menu';
+import Sidebar from "./Sidebar";
+
 
 const Topbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  }
+
   return (
     <>
-      <nav className="bg-[#fff] px-4 select-none w-full shadow-sm">
+      <Sidebar open={open} />
+      <nav className="bg-[#fff] px-4 select-none w-full shadow-sm fixed top-0 z-40 flex justify-between items-center">
+        <div onClick={handleOpen}>
+          <MenuIcon fontSize="" className="text-3xl text-purple-contrast cursor-pointer hover:text-purple-800 ml-[8px]" />
+        </div>
         <div className="flex justify-end">
           <div className="flex items-center py-2 ">
             <div className="flex items-center mr-4 hover:text-slate-600 cursor-pointer text-primary">
@@ -24,7 +37,6 @@ const Topbar = () => {
             </div>
           </div>
         </div>
-        <div className=""></div>
       </nav >
     </>
   );
