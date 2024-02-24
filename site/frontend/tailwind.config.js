@@ -25,7 +25,7 @@ module.exports = {
       'sans': ['Roboto', 'sans-serif'],
     },
     backgroundColor: {
-
+      'purple-contrast': '#3D0053',
     }
   },
   plugins: [],
