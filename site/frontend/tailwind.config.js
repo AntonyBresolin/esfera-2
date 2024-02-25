@@ -20,6 +20,7 @@ module.exports = {
       backgroundColor: {
         'defaultBg': '#DCDCDC',
         'fields': '#F0F0F7',
+        'purple-highlight': '#6502D4',
       }
     },
     fontFamily: {

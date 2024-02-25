@@ -20,14 +20,14 @@ const router = createBrowserRouter([
         path: '/',
         Component: RootLayout,
         children: [
-          { path: '/', Component: DashboardPage, errorElement: <NoGroupScreen /> },
+          { path: '/', Component: DashboardPage, errorElement: <LoginPage /> },
         ],
       }
     ]
   },
   // Rotas não protegidas
   { path: 'login', Component: LoginPage },
-  { path: '*', Component: NoGroupScreen },
+  { path: '*', Component: LoginPage },
   { path: 'dashboard', Component: DashboardPage, errorElement: <NoGroupScreen /> },
 ]);
 
