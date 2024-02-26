@@ -6,6 +6,8 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import AddchartIcon from '@mui/icons-material/Addchart';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import HelpIcon from '@mui/icons-material/Help';
+import SettingsIcon from '@mui/icons-material/Settings';
+import { NavLink } from 'react-router-dom';
 
 
 const Sidebar = ({ open }) => {
@@ -21,7 +23,7 @@ const Sidebar = ({ open }) => {
     })}>
       <nav className='flex flex-col pt-[61px] justify-between h-full'>
         <div className='flex flex-col items-center px-2 py-2'>
-          <div className={classNames(
+          <NavLink to={'/user/dashboard'} className={classNames(
             'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 0,
           })} onClick={() => handleSelected(0)}>
@@ -32,7 +34,7 @@ const Sidebar = ({ open }) => {
             <span className={classNames('ml-3', {
               'hidden': open,
             })}>Dashboard</span>
-          </div>
+          </NavLink>
           <div className={classNames(
             'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
             'bg-purple-contrast text-white': selected === 1,
@@ -83,6 +85,19 @@ const Sidebar = ({ open }) => {
               'hidden': open,
             })}>Ligações</span>
           </div>
+          <NavLink to='/user/configuration' className={classNames(
+            'w-full flex items-center py-4 px-4 rounded-2xl text-purple-contrast font-bold my-2 cursor-pointer hover:shadow-md duration-300 ease-in-out', {
+            'bg-purple-contrast text-white': selected === 5,
+          })}
+            onClick={() => handleSelected(5)}>
+            <SettingsIcon fontSize='' className={classNames(
+              'text-3xl', {
+              'text-amber': selected === 5,
+            })} />
+            <span className={classNames('ml-3', {
+              'hidden': open,
+            })}>Configurações</span>
+          </NavLink>
         </div>
         <div>
           <hr></hr>
