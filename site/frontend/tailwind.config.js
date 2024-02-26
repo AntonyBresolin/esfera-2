@@ -21,6 +21,8 @@ module.exports = {
         'defaultBg': '#DCDCDC',
         'fields': '#F0F0F7',
         'purple-highlight': '#6502D4',
+        'icon-secundary': '#344054',
+        'gray-50': '#F9FAFB',
       }
     },
     fontFamily: {

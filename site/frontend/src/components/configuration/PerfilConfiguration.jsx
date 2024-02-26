@@ -8,7 +8,7 @@ const PerfilConfiguration = () => {
           <h2 className='text-xl font-semibold'>Informações pessoais</h2>
           <p className='text-secondary'>Atualize suas informações pessoais.</p>
         </div>
-        <div>
+        <div className='flex items-center'>
           <button className='bg-[#fff] text-primary border-checkbox border-2 px-8 py-1 rounded-lg mr-4 font-semibold hover:bg-defaultBg duration-150 ease-in-out'>Cancelar</button>
           <button className='bg-purple-highlight text-white px-8 py-1 rounded-lg font-semibold hover:bg-[#5f04c4] duration-150 ease-in-out' type='submit'>Salvar</button>
         </div>
