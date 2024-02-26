@@ -23,6 +23,7 @@ module.exports = {
         'purple-highlight': '#6502D4',
         'icon-secundary': '#344054',
         'gray-50': '#F9FAFB',
+        'stroke-color': "#E5E5E5",
       }
     },
     fontFamily: {

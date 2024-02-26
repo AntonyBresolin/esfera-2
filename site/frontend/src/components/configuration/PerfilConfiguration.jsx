@@ -86,7 +86,7 @@ const PerfilConfiguration = () => {
             invalid:text-pink-600
             focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
           />
-          <input type="password" name="password" id="password" placeholder='Repita a nova senha' className="
+          <input type="password" name="repeatNewPassword" id="repeatNewPassword" placeholder='Repita a nova senha' className="
             w-full p-2 my-2 rounded-md border border-gray-300 shadow-md focus:outline-none 
             focus:border-sky-500 focus:ring-1 focus:ring-sky-500
             disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
