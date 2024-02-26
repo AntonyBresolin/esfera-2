@@ -13,7 +13,7 @@ const LoginPage = () => {
 
     try {
       console.log(data);
-      window.location.href = "/dashboard";
+      window.location.href = "/user/dashboard";
     } catch (error) {
       console.error(error);
     }

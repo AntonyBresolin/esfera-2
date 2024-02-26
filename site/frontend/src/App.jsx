@@ -10,6 +10,7 @@ import DashboardPage from "./views/DashboardPage";
 import LoginPage from "./views/LoginPage";
 import NoGroupScreen from "./views/NoGroupScreen";
 import { ProtectedRoutes } from "./routes/ProtectedRoutes";
+import ConfigurationPage from "./views/ConfigurationPage";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,12 @@ const router = createBrowserRouter([
   // Rotas não protegidas
   { path: 'login', Component: LoginPage },
   { path: '*', Component: LoginPage },
-  { path: 'dashboard', Component: DashboardPage, errorElement: <NoGroupScreen /> },
+  {
+    path: 'user', Component: RootLayout, errorElement: <NoGroupScreen />, children: [
+      { path: 'dashboard', Component: DashboardPage, errorElement: <LoginPage /> },
+      { path: 'configuration', Component: ConfigurationPage, errorElement: <LoginPage /> },
+    ]
+  },
 ]);
 
 

@@ -6,11 +6,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from "./Sidebar";
 import { NavLink } from "react-router-dom";
 import LogoutIcon from '@mui/icons-material/Logout';
+import EmailIcon from '@mui/icons-material/Email';
+import GroupsIcon from '@mui/icons-material/Groups';
+import TuneIcon from '@mui/icons-material/Tune';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import DeleteIcon from '@mui/icons-material/Delete';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 
 const Topbar = () => {
   const [open, setOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -19,6 +25,7 @@ const Topbar = () => {
   const handleDropdown = () => {
     setDropdown(!dropdown);
   }
+
 
   return (
     <>
@@ -43,15 +50,42 @@ const Topbar = () => {
               <AccountCircleIcon fontSize="" className="text-[45px] " />
             </div>
           </div>
-          <div className={`absolute md:mt-[60px] right-10 bg-[#fff] ${dropdown ? "block" : "hidden"} `}>
-            <ul>
-              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48 border-2 select-none flex items-center">
+          <div className={`absolute md:mt-[60px] right-10 bg-[#fff] ${dropdown ? "block" : "hidden"} rounded-b-lg shadow-lg  py-2 `}>
+            <ul className="text-purple-contrast">
+              <NavLink to="/user/configuration" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <SettingsIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Configurações de perfil</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <EmailIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Configurações de email</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <GroupsIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Equipes</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <TuneIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Criar serviços</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <CloudDownloadIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Importar dados</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <DeleteIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Lixeira</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
                 <LogoutIcon fontSize="" className="text-2xl mr-4" />
-                <span>Profile</span>
+                <span className="text-black">Sair</span>
+              </NavLink>
+              <NavLink to="/login" className="cursor-pointer hover:bg-purple-highlight hover:text-amber p-2 w-48  select-none flex items-center">
+                <QuestionMarkIcon fontSize="" className="text-2xl mr-4" />
+                <span className="text-black">Obter ajuda</span>
               </NavLink>
             </ul>
           </div>
-
         </div>
       </nav >
     </>
