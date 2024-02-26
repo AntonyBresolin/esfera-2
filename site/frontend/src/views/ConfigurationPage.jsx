@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import PerfilConfiguration from '../components/configuration/PerfilConfiguration';
 import GroupConfiguration from '../components/configuration/GroupConfiguration';
+import GoalConfiguration from '../components/configuration/GoalConfiguration';
 
 const ConfigurationPage = () => {
   const [selected, setSelected] = useState(0);
@@ -31,6 +32,7 @@ const ConfigurationPage = () => {
         <div className='w-full  mt-4 flex flex-col px-8'>
           {selected === 0 && <PerfilConfiguration />}
           {selected === 1 && <GroupConfiguration />}
+          {selected === 2 && <GoalConfiguration />}
         </div>
       </div>
     </div>
