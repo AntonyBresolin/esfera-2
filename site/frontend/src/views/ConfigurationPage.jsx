@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import PerfilConfiguration from '../components/configuration/PerfilConfiguration';
 import GroupConfiguration from '../components/configuration/GroupConfiguration';
 import GoalConfiguration from '../components/configuration/GoalConfiguration';
+import HelpConfiguration from '../components/configuration/HelpConfiguration';
 
 const ConfigurationPage = () => {
   const [selected, setSelected] = useState(0);
@@ -33,6 +34,7 @@ const ConfigurationPage = () => {
           {selected === 0 && <PerfilConfiguration />}
           {selected === 1 && <GroupConfiguration />}
           {selected === 2 && <GoalConfiguration />}
+          {selected === 3 && <HelpConfiguration />}
         </div>
       </div>
     </div>
